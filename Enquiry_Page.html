@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MetaCraft Interior Trading</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; }
+        /* Navigation Header - Matches index.html */
+        .nav-header { position: fixed; top: 0; width: 100%; background: linear-gradient(135deg, #1a3a52, #00bcd4); color: white; padding: 1rem 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; }
+        .logo img { height: 50px; object-fit: contain; } /* Add src="MetaCraft.jpeg" if available */
+        .nav-menu { display: flex; list-style: none; }
+        .nav-menu li { margin-left: 2rem; }
+        .nav-link { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover { color: #ffd700; }
+        /* Main Content */
+        .container { max-width: 1200px; margin: 100px auto 0; padding: 2rem; }
+        .hero { text-align: center; margin-bottom: 4rem; }
+        .hero h1 { font-size: 3rem; color: #1a3a52; margin-bottom: 1rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { font-size: 2.5rem; color: #00bcd4; margin-bottom: 1.5rem; text-align: center; }
+        .content p { font-size: 1.1rem; margin-bottom: 1rem; text-align: justify; }
+        /* Responsive */
+        @media (max-width: 768px) { .nav-menu { display: none; } .hero h1 { font-size: 2rem; } .container { padding: 1rem; } }
+        @media print { .nav-header { display: none; } }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MetaCraft <img src="MetaCraft.jpeg" alt="Logo" class="logo-img" style="display:inline-block; margin-left:0.5rem;"></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+        	<li class="nav-item"><a href="Photo_Gallery_Web.html" class="nav-link">Products</a></li>
+       		<li class="nav-item"><a href="#photo-gallery" class="nav-link">Photo Gallery</a></li>
+        	<li class="nav-item"><a href="#video-gallery" class="nav-link">Video Gallery</a></li>
+        	<li class="nav-item"><a href="Enquiry_Page.html" class="nav-link">Enquiry</a></li>
+        	<li class="nav-item"><a href="Index.html" class="nav-link">Contact Us</a></li>
+        	<li class="nav-item"><a href="About Us_page.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry - MetaCraft Interior Trading</title>
