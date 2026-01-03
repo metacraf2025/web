@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Flow System</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px 30px 40px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .description-box {
+      border: 1px solid #999;
+      padding: 10px 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      background: #fafafa;
+    }
+
+    .main-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left-column {
+      flex: 2 1 60%;
+      min-width: 280px;
+    }
+
+    .right-column {
+      flex: 1 1 35%;
+      min-width: 220px;
+    }
+
+    .airflow-stack {
+      margin-bottom: 20px;
+    }
+
+    .airflow-rate {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .size-box {
+      border: 1px solid #999;
+      padding: 10px 15px;
+      margin-top: 10px;
+      font-size: 14px;
+      background: #fafafa;
+    }
+
+    .size-box h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .centered-image {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .centered-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Air Flow System</h1>
+
+    <div class="description-box">
+      Provide superior cooling for managing heat loads in mission critical facilities. 
+      Available with top surface adjustable dampers. 
+      The steel perforated panels are same size and finish as the solid panel, 
+      so they are available with high pressure laminates, vinyl and rubber floor coverings 
+      interchangeable with wood-core panel/calcium sulphate panel.
+    </div>
+
+    <!-- Optional: show the full image at the top -->
+    <div class="centered-image">
+      <img src="AireFlow 1.jpg" alt="Air Flow System layout">
+    </div>
+
+    <div class="main-layout">
+
+      
+
+      <!-- Right column: size and short description -->
+      <div class="right-column">
+        <div class="size-box">
+          <h2>Size</h2>
+          <p>600 x 600 x 33 mm</p>
+          <p>610 x 610 x 33 mm</p>
+          <p>Steel perforated panel is specially designed to allow air flow through the access floor up to the equipment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom gallery: if you cut the four small photos into separate files, replace image names below -->
+    <div class="gallery">
+      <img src="AireFlow 5.jpg" alt="Perforated floor in data center 1">
+      <img src="AireFlow 2.jpg" alt="Perforated floor in data center 2">
+      <img src="AireFlow 6.jpg" alt="Perforated floor in data center 3">
+      <img src="AireFlow 4.jpg" alt="Perforated floor in data center 4">
+    </div>
+  </div>
+
+</body>
+</html>

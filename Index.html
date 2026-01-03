@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaCraft Interior Trading - Product Catalogue 2025</title>
+  <!-- Font for catalogue cover -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --------- NAVIGATION BAR --------- */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+      padding: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu {
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      list-style: none;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s;
+      display: block;
+      padding: 15px 12px;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-item:last-child .nav-link {
+      border-right: none;
+    }
+
+    .nav-link:hover {
+      background-color: rgba(0, 188, 212, 0.2);
+      color: #00bcd4;
+    }
+
+    .nav-link:active {
+      background-color: rgba(0, 188, 212, 0.4);
+    }
+
+    /* --------- COVER PAGE --------- */
+    .cover-page-wrapper {
+      background: linear-gradient(135deg, #1a3a52 0%, #2c5282 50%, #00bcd4 100%);
+      padding: 100px 20px 40px 20px;
+      page-break-after: always;
+      margin-top: 0;
+    }
+
+    .cover-container {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(18px);
+      border-radius: 28px;
+      padding: 70px 56px;
+      text-align: center;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-container::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(0, 188, 212, 0.13) 0%, transparent 70%);
+    }
+
+    .logo-full {
+      width: 100%;
+      max-width: 750px;
+      max-height: 420px;
+      margin: 0 auto 40px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+
+    .catalogue-subtitle {
+      position: relative;
+      z-index: 1;
+      font-weight: 400;
+      font-size: 18px;
+      color: #374151;
+      margin-bottom: 32px;
+    }
+
+    .product-count {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      background: linear-gradient(135deg, #00bcd4, #0099a8);
+      color: #ffffff;
+      padding: 16px 34px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+    .premium-tag {
+      position: relative;
+      z-index: 1;
+      font-weight: 400;
+      font-size: 16px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    /* --------- CATALOGUE STYLES --------- */
+    .header {
+      background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+      color: white;
+      padding: 30px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-logo {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    .header-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .header-text h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .header-text p {
+      font-size: 14px;
+      color: #b0bec5;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a3a52;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #00bcd4;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      page-break-inside: avoid;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #e0e0e0;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-category {
+      font-size: 12px;
+      color: #00bcd4;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a3a52;
+      margin-bottom: 8px;
+    }
+
+    .product-summary {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    .feature-list li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f6 100%);
+      padding: 40px;
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    .benefits-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a3a52;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      border-left: 4px solid #00bcd4;
+    }
+
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a3a52;
+      margin-bottom: 10px;
+    }
+
+    .benefit-text {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .contact-item-title {
+      font-size: 14px;
+      color: #00bcd4;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .contact-item-value {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .hours {
+      text-align: left;
+      display: inline-block;
+      background: rgba(0, 188, 212, 0.1);
+      padding: 20px 30px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .hours-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hours-list {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Applications */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .app-item {
+      background: #f0f4f8;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #00bcd4;
+    }
+
+    .app-title {
+      color: #1a3a52;
+      margin-bottom: 10px;
+    }
+
+    .app-desc {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .footer {
+      background: #1a3a52;
+      color: white;
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-text {
+      margin-bottom: 10px;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      color: #fff;
+    }
+
+    /* Media Queries */
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+
+      .cover-page-wrapper,
+      .header,
+      .content,
+      .section,
+      .product-card,
+      .benefits,
+      .contact-section {
+        page-break-inside: avoid;
+      }
+
+      .nav-bar {
+        display: none;
+      }
+
+      .social-links {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .header-text h1 {
+        font-size: 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-item {
+        flex: none;
+        width: 100%;
+        min-width: unset;
+      }
+
+      .nav-link {
+        padding: 12px 8px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: none;
+      }
+
+      .nav-item:last-child .nav-link {
+        border-bottom: none;
+      }
+
+      .social-links {
+        gap: 12px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+      }
+
+      .social-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 1cm 1.5cm;
+      /* Top/bottom 1cm, sides 1.5cm for bleed/printer tolerance */
+    }
+
+    @media print {
+      html,
+      body {
+        width: 210mm !important;
+        height: auto !important;
+        max-height: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 11pt;
+        /* Slight reduction for dense catalogue fit */
+        line-height: 1.3;
+      }
+
+      .container {
+        max-width: 190mm !important;
+        /* Accounts for margins */
+        width: 100% !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        background: white !important;
+      }
+
+      .cover-page-wrapper,
+      .header,
+      .content,
+      .section,
+      .product-grid,
+      .product-card,
+      .benefits,
+      .contact-section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      margin-bottom: 10mm;
+
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+      }
+
+      /* Reduce grid density if needed */
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80mm, 1fr)) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- NAVIGATION BAR -->
+    <nav class="nav-bar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+        <li class="nav-item"><a href="#photo-gallery" class="nav-link">Photo Gallery</a></li>
+        <li class="nav-item"><a href="#video-gallery" class="nav-link">Video Gallery</a></li>
+        <li class="nav-item"><a href="#enquiry" class="nav-link">Enquiry</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- COVER PAGE V4 -->
+    <div class="cover-page-wrapper" id="home">
+      <div class="cover-container">
+        <img src="MetaCraft.jpeg" alt="MetaCraft Interior Trading" class="logo-full">
+        <div class="catalogue-subtitle">Raised Flooring | Ceilings | Workspace Solutions</div>
+        <div class="product-count">Premium Products</div>
+        <div class="premium-tag">Premium Interior Solutions for Modern Commercial Spaces</div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-left">
+        <div class="header-logo">
+          <img src="MetaCraft.jpeg" alt="MetaCraft">
+        </div>
+        <div class="header-text">
+          <h1 style="font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;">
+            MetaCraft Interior Trading FZ-LLC
+          </h1>
+          <p>Premium Workplace Product Solutions</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Index -->
+      <div class="section" id="products">
+        <h2 class="section-title">Product Index</h2>
+        <ul style="columns: 2; list-style: disc; margin-left: 20px; color: #555; font-size: 14px;">
+          <li>False Flooring (Raised Access Floor RAF) Systems</li>
+          <li>Interior False Ceiling</li>
+          <li>Glass Partition</li>
+          <li>Underfloor Air Distribution (UFAD) Systems</li>
+          <li>Power & Ergonomics Solutions</li>
+        </ul>
+      </div>
+
+      <!-- About Us -->
+      <div class="section" id="about">
+        <h2 class="section-title">About Us</h2>
+        <p style="font-size: 16px; line-height: 1.8; color: #555;">
+          Metacraft Interior Trading Company, based in the UAE, specializes in supplying high-quality interior and
+          architectural finishing materials that meet international standards. With strong partnerships across the GCC
+          and India, we offer products such as metal ceiling systems, raised access floors, partition grids, and
+          decorative finishes for corporate offices, data centers, healthcare facilities, and industrial spaces.
+          <br><br>
+          Driven by quality, innovation, and customer satisfaction, Metacraft combines design expertise with reliable
+          sourcing to deliver sustainable and modern interior solutions. We welcome collaborations built on trust,
+          growth, and shared success.
+        </p>
+      </div>
+
+      <!-- 1. Raised Access Floor Products -->
+      <div class="section">
+        <h2 class="section-title">Raised Access Floor (RAF) Systems</h2>
+        <p style="margin-bottom: 30px; color: #666;">Engineered floors that create a service void for power, data and
+          air distribution in high-performance environments.</p>
+        <div class="product-grid">
+          <div class="product-card">
+            <img
+              src="https://image.made-in-china.com/365f3j00JsgiBkhqlcro/Steel-Access-Floor-System-OA-Bare-Panel-for-Modern-Office.webp"
+              alt="Steel Bare Panels" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Floor Systems</div>
+              <div class="product-name">Steel Bare Panels</div>
+              <p class="product-summary">Heavy-duty steel panels with a cementitious core provide a robust, stable
+                surface ideal for data centers and control rooms.</p>
+              <ul class="feature-list">
+                <li>Fire-rated construction with high load capacity</li>
+                <li>Standard 600 × 600 mm module size</li>
+                <li>Optional anti-static HPL or tile finishes</li>
+                <li>Compatible with full understructure systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/6e16aeca-402c-51e6-9e05-be0b64d84862/a92ea09e-dc28-5bef-a960-d150baf0dc20.jpg"
+              alt="HPL Panels" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Floor Systems</div>
+              <div class="product-name">HPL Finish Panels</div>
+              <p class="product-summary">Solid concrete core panels are designed for the highest static and rolling
+                loads in demanding industrial and technical areas.</p>
+              <ul class="feature-list">
+                <li>Very high load and impact resistance</li>
+                <li>Long service life with minimal maintenance</li>
+                <li>Ideal for control rooms and equipment halls</li>
+                <li>Works with heavy-duty pedestal systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://pplx-res.cloudinary.com/image/upload/v1766578293/search-images/b0e342de-dd67-3520-5bf2-cab4c38f058e/fb13c17e.jpg"
+              alt="Vinyl Vetifile Finish" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Floor Systems</div>
+              <div class="product-name">Vinyl Vetifile Finish Panels</div>
+              <p class="product-summary">Solid concrete core panels are designed for the highest static and rolling
+                loads in demanding industrial and technical areas.</p>
+              <ul class="feature-list">
+                <li>Very high load and impact resistance</li>
+                <li>Long service life with minimal maintenance</li>
+                <li>Ideal for control rooms and equipment halls</li>
+                <li>Works with heavy-duty pedestal systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Interior False Ceiling -->
+      <div class="section">
+        <h2 class="section-title">Interior False Ceiling</h2>
+        <p style="margin-bottom: 30px; color: #666;">Architectural false ceiling and louver systems that enhance
+          acoustics, aesthetics and service access.</p>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="Metal Ceiling 3.jpg" alt="Metal Ceiling" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Ceiling System</div>
+              <div class="product-name">Metal Ceiling</div>
+              <p class="product-summary">Durable metal tiles and planks create crisp, modern ceilings with excellent
+                longevity and easy maintenance.</p>
+              <ul class="feature-list">
+                <li>Quick tile swaps for plenum access, no tools—full disassembly.</li>
+                <li>Perforated acoustic options with backing.</li>
+                <li>Strong for high-traffic, industrial, humid areas—low upkeep.</li>
+                <li>Ideal for lobbies, corridors, offices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/d59459e8-94ad-5953-ae29-17430d520f9b/22c8e68c-ef83-5ca4-b393-9ef94cc71602.jpg"
+              alt="Metal Lay Ceiling" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Ceiling System</div>
+              <div class="product-name">Metal Lay Ceiling</div>
+              <p class="product-summary">Durable metal tiles and planks create crisp, modern ceilings with excellent
+                longevity and easy maintenance.</p>
+              <ul class="feature-list">
+                <li>Impact–moisture–fire–mildew resistant, wipe-clean upkeep.</li>
+                <li>Perforated for noise absorption in offices—hospitals—kitchens.</li>
+                <li>Individual tile removal for plenum access, minimal HVAC disruption.</li>
+                <li>Fits lobbies, corridors, offices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://www.usgme.com/media/catalog/product/alaln-600x600x6r16-1.jpg" alt="SS Lay Ceiling"
+              class="product-image">
+            <div class="product-info">
+              <div class="product-category">Ceiling System</div>
+              <div class="product-name">SS Lay Ceiling</div>
+              <p class="product-summary">Durable metal tiles and planks create crisp, modern ceilings with excellent
+                longevity and easy maintenance.</p>
+              <ul class="feature-list">
+                <li>Superior corrosion–moisture resistance for humid–chemical areas.</li>
+                <li>Hygienic surface blocks bacteria; suits healthcare–food sectors.</li>
+                <li>Quick panel removal for cleaning and overhead access.</li>
+                <li>Perforated options with acoustic backing for sound control.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Glass Partition System -->
+      <div class="section">
+        <h2 class="section-title">Glass Partition</h2>
+        <p style="margin-bottom: 30px; color: #666;">Glass partition systems come in various types like framed,
+          frameless, and sliding, each offering distinct balances of privacy, light transmission, and functionality
+          for offices, homes, and commercial spaces. Common materials include tempered, laminated, or acoustic glass
+          with customizable finishes.</p>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="Frame Glass Partitioning.jpg" alt="Glass Partition" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Frame System</div>
+              <div class="product-name">Frame Partition</div>
+              <p class="product-summary">Framed glass partitions use slim aluminum or steel frames around tempered
+                glass panels to provide structural support and a polished, professional look in offices and commercial
+                spaces. They balance durability with aesthetics, offering more stability than frameless options while
+                allowing light transmission.</p>
+              <ul class="feature-list">
+                <li>Slim aluminum frames 20-50mm for 12mm glass durability.</li>
+                <li>Modular panels with doors, seals for reconfiguration.</li>
+                <li>Frosting/tinting for privacy, demountable design.</li>
+                <li>More stable than frameless for UAE/India offices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="Semi Frame Glass Partitioning.jpg" alt="Semi Glass Frame Partition" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Frame System</div>
+              <div class="product-name">Semi Frame Partition</div>
+              <p class="product-summary">Semi-framed glass partitions combine minimal framing—typically at the top and
+                bottom channels—with large glass panels on the sides for a balanced, modern look that offers more
+                support than fully frameless systems. They provide structural stability while maintaining high
+                transparency and light flow in offices and commercial interiors.</p>
+              <ul class="feature-list">
+                <li>Slim profiles 15-50mm hold 8-12mm toughened glass edge-to-edge sides.</li>
+                <li>Modular GP25×10 (41.5×25mm) or GP18×100 (18×100mm) channels for single/double/VIG glazing.</li>
+                <li>Sliding/swing doors, seals, powder-coat, 3m heights with brackets/clips.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="Frameless Glass Partitioning.jpg" alt="Frameless Glass Frame Partition" class="product-image">
+            <div class="product-info">
+              <div class="product-category">Frameless System</div>
+              <div class="product-name">Frameless Partition</div>
+              <p class="product-summary">Frameless glass partitions employ single large sheets of toughened or laminated
+                glass secured by minimal top/bottom tracks or patch fittings, eliminating visible frames for a seamless,
+                ultra-modern appearance. They maximize transparency and light flow in offices, homes, and retail spaces
+                while providing privacy options via frosting or tinting.</p>
+              <ul class="feature-list">
+                <li>8-16mm glass (tempered/low-iron/LCD) up to 60° wide x 12ft high, curved options.</li>
+                <li>1×1/1×4 tracks in anodized/RAL, pivot/sliding doors, STC 47.</li>
+                <li>Patch fittings, guides, blinds for easy relocation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- 4. Underfloor Air Distribution -->
+            <div class="section">
+                <h2 class="section-title">Underfloor Air Distribution (UFAD)</h2>
+                <p style="margin-bottom: 30px; color: #666;">Efficient HVAC solutions delivering conditioned air through the raised floor plenum.</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1763892562/search_images/a8393b754fe9b61e741495af78aee2e0efb0ad1a.jpg" alt="UFAD Plenum System" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">UFAD Plenum System</div>
+                            <p class="product-summary">
+                                Creates a sealed underfloor air plenum that distributes conditioned air evenly across open office or data hall layouts.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Improved thermal comfort and energy efficiency</li>
+                                <li>Supports flexible space reconfiguration</li>
+                                <li>Integrates with standard HVAC equipment</li>
+                                <li>Reduced ductwork in ceiling space</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766578294/search_images/0862622faf0f83c6ab4134fa6d59be6381c9dd02.jpg" alt="UFAD Diffusers & Grilles" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">UFAD Diffusers & Grilles</div>
+                            <p class="product-summary">
+                                Floor diffusers and grilles regulate air delivery at occupant level for superior comfort and individual control.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Adjustable airflow direction and volume</li>
+                                <li>Low noise operation for quiet offices</li>
+                                <li>Available in circular and rectangular forms</li>
+                                <li>Easy removal for cleaning and maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1764134666/search_images/4a0f2cf2c0fcc44b6858de1d28cedd8769570534.jpg" alt="Smart Temperature Control" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">Smart Temperature Control</div>
+                            <p class="product-summary">
+                                Zone thermostats and sensors monitor floor plenum conditions and maintain stable temperatures throughout the space.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Supports zoning and occupancy‑based control</li>
+                                <li>Compatible with modern BMS platforms</li>
+                                <li>Real‑time monitoring of supply conditions</li>
+                                <li>Helps reduce overall energy consumption</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+     <!-- Why Choose Us -->
+<div class="benefits">
+    <h2 class="benefits-title">Why Choose MetaCraft Interior Trading</h2>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <img src="QA_Icon.png" class="benefit-icon">
+            <div class="benefit-title">Quality Assurance</div>
+            <div class="benefit-text">Processes aligned to international standards and backed by rigorous testing at every stage.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Comprehensive Range Icon.jfif" alt="Comprehensive Range" class="benefit-icon">
+            <div class="benefit-title">Comprehensive Range</div>
+            <div class="benefit-text">Single‑window source for flooring, ceilings, airflow, power and ergonomic solutions.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Expert Support Icon.jfif" alt="Expert Support" class="benefit-icon">
+            <div class="benefit-title">Expert Support</div>
+            <div class="benefit-text">Dedicated team for design assistance, site coordination and post‑installation service.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Cost Effective Icon.png" alt="Cost-Effective" class="benefit-icon">
+            <div class="benefit-title">Cost-Effective</div>
+            <div class="benefit-text">Optimized product selection for lifecycle value, with options for bulk and project pricing.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Sustainability Icon.png" alt="Sustainability" class="benefit-icon">
+            <div class="benefit-title">Sustainability</div>
+            <div class="benefit-text">Focus on energy‑efficient solutions and recyclable materials wherever possible.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Future Ready ICON.png" alt="Future Ready" class="benefit-icon">
+            <div class="benefit-title">Future Ready</div>
+            <div class="benefit-text">Modular systems that support future technology upgrades and layout changes.</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.benefit-icon {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .benefit-icon {
+        width: 50px !important;
+        height: 50px !important;
+        padding: 10px;
+    }
+}
+</style>
+
+      <!-- Applications -->
+      <div class="section">
+        <h2 class="section-title">Applications</h2>
+        <div class="app-grid">
+          <div class="app-item">
+            <h3 class="app-title">Data Centers</h3>
+            <p class="app-desc">Raised floors, airflow containment, structured cabling and reliable power for mission-critical
+              IT environments.</p>
+          </div>
+          <div class="app-item">
+            <h3 class="app-title">Corporate Offices</h3>
+            <p class="app-desc">Flexible workstations, acoustic ceilings and integrated services for modern, collaborative
+              workplaces.</p>
+          </div>
+          <div class="app-item">
+            <h3 class="app-title">Healthcare</h3>
+            <p class="app-desc">Cleanable ceilings, resilient floors and controlled services for hospitals and diagnostic
+              centers.</p>
+          </div>
+          <div class="app-item">
+            <h3 class="app-title">Financial Institutions</h3>
+            <p class="app-desc">Secure infrastructure for trading floors, server rooms and head offices with high uptime
+              requirements.</p>
+          </div>
+          <div class="app-item">
+            <h3 class="app-title">Educational</h3>
+            <p class="app-desc">Classrooms, labs and lecture halls with good acoustics and flexible technology integration.
+            </p>
+          </div>
+          <div class="app-item">
+            <h3 class="app-title">Industrial & Warehousing</h3>
+            <p class="app-desc">Heavy-duty floors, louvers and robust services for plants, logistics hubs and control
+              buildings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-section" id="contact">
+        <h2 class="contact-title">Get in Touch</h2>
+        <p style="margin-bottom: 40px; font-size: 16px;">Contact MetaCraft Interior Trading for detailed product
+          specifications, BOQs and project-specific proposals.</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-item-title">Email</div>
+            <div class="contact-item-value">metacraft.interior.trading@gmail.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-title">Mobile</div>
+            <div class="contact-item-value">+971 56 242 4001</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-title">Website</div>
+            <div class="contact-item-value">www.metacraft.in</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-title">Ajman Free Zone</div>
+            <div class="contact-item-value">Ajman, UAE</div>
+          </div>
+        </div>
+        <div class="hours">
+          <div class="hours-title">Business Hours</div>
+          <div class="hours-list">
+            Monday - Friday: 9:00 AM - 6:00 PM IST<br>
+            Saturday: 10:00 AM - 4:00 PM IST<br>
+            Sunday: Closed
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-text"><strong>MetaCraft Interior Trading</strong> - Premium Workplace Products Catalogue 2025
+      </div>
+      <div class="footer-text">All products come with manufacturer warranty. Customization & bulk discounts available.
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="https://facebook.com/metacraftuae" class="social-link" target="_blank" aria-label="Facebook"
+          rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#1877F2"
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://instagram.com/metacraftuae" class="social-link" target="_blank" aria-label="Instagram"
+          rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#E4405F"
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://youtube.com/metacraftuae" class="social-link" target="_blank" aria-label="YouTube" rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#FF0000"
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/company/metacraftuae" class="social-link" target="_blank" aria-label="LinkedIn"
+          rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#0077B5"
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://x.com/metacraftuae" class="social-link" target="_blank" aria-label="X Twitter" rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#000000"
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+            </path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-text" style="font-size: 12px; margin-top: 15px; color: #888;">
+        Document Version 1.0 | Date: December 2025 | Valid Until: December 2026<br>
+        For the most up-to-date product information, please contact us directly.
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

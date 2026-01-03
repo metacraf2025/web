@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCraft Interior Trading - Product Catalogue 2025</title>
+    <!-- Font for catalogue cover -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /*--------- COVER PAGE ---------*/
+        .cover-page-wrapper {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 50%, #00bcd4 100%);
+            padding: 40px 20px;
+            page-break-after: always;
+        }
+        .cover-container {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(18px);
+            border-radius: 28px;
+            padding: 70px 56px;
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-container::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(0,188,212,0.13) 0%, transparent 70%);
+        }
+        .logo-full {
+            width: 100%;
+            max-width: 750px;
+            max-height: 420px;
+            margin: 0 auto 40px;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+        .catalogue-subtitle {
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+            font-size: 18px;
+            color: #374151;
+            margin-bottom: 32px;
+        }
+        .product-count {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            background: linear-gradient(135deg, #00bcd4, #0099a8);
+            color: #ffffff;
+            padding: 16px 34px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 26px;
+        }
+        .premium-tag {
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+            font-size: 16px;
+            color: #6b7280;
+            margin-top: 10px;
+        }
+        /*--------- CATALOGUE STYLES FROM V3 ---------*/
+        .header {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+            color: white;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+        .header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .header-text h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .header-text p {
+            font-size: 14px;
+            color: #b0bec5;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 60px;
+            page-break-inside: avoid;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #00bcd4;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            page-break-inside: avoid;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #e0e0e0;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-category {
+            font-size: 12px;
+            color: #00bcd4;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 8px;
+        }
+        .product-summary {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .feature-list {
+            list-style: none;
+            margin: 10px 0;
+        }
+        .feature-list li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00bcd4;
+            font-weight: bold;
+        }
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f6 100%);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        .benefits-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .benefit-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #00bcd4;
+        }
+        .benefit-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .benefit-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a3a52;
+            margin-bottom: 10px;
+        }
+        .benefit-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .contact-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            text-align: center;
+        }
+        .contact-item-title {
+            font-size: 14px;
+            color: #00bcd4;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .contact-item-value {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .hours {
+            text-align: left;
+            display: inline-block;
+            background: rgba(0,188,212,0.1);
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .hours-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .hours-list {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        /* Applications */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .app-item {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+        }
+        .app-title {
+            color: #1a3a52;
+            margin-bottom: 10px;
+        }
+        .app-desc {
+            color: #666;
+            font-size: 14px;
+        }
+        .footer {
+            background: #1a3a52;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .footer-text {
+            margin-bottom: 10px;
+        }
+        @media print {
+            body { background: #ffffff; }
+            .container { box-shadow: none; max-width: 100%; }
+            .cover-page-wrapper { background: #ffffff; padding: 0; }
+            .section, .product-card { page-break-inside: avoid; }
+        }
+        @media (max-width: 768px) {
+            .content { padding: 20px; }
+            .header { flex-direction: column; gap: 20px; }
+            .header-text h1 { font-size: 20px; }
+            .section-title { font-size: 24px; }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+
+
+@page {
+  size: A4 portrait;
+  margin: 1cm 1.5cm; /* Top/bottom 1cm, sides 1.5cm for bleed/printer tolerance */
+}
+
+@media print {
+  html, body {
+    width: 210mm !important;
+    height: auto !important;
+    max-height: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 11pt; /* Slight reduction for dense catalogue fit */
+    line-height: 1.3;
+  }
+  .container {
+    max-width: 190mm !important; /* Accounts for margins */
+    width: 100% !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+  .cover-page-wrapper, .header, .content, .section, .product-grid, .product-card, .benefits, .contact-section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important; /* Modern browsers */
+    margin-bottom: 10mm;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  /* Reduce grid density if needed */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80mm, 1fr)) !important;
+  }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- COVER PAGE (V4) -->
+        <div class="cover-page-wrapper">
+            <div class="cover-container">
+                <img src="MetaCraft.jpeg" alt="MetaCraft Interior Trading" class="logo-full">
+                <div class="catalogue-subtitle">Raised Flooring | Ceilings | Workspace Solutions</div>
+                <div class="product-count">Premium Products</div>
+                <div class="premium-tag">Premium Interior Solutions for Modern Commercial Spaces</div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-left">
+                <div class="header-logo">
+                    <img src="MetaCraft.jpeg" alt="MetaCraft">
+                </div>
+                <div class="header-text">
+                    <h1>
+		    <font face="Poppins, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+		          MetaCraft Interior Trading FZ-LLC</font>
+		    </h1>
+                    <p>Premium Workplace Product Solutions</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Main Content -->
+        <div class="content">
+
+            <!-- Index -->
+            <div class="section">
+                <h2 class="section-title">Product Index</h2>
+                <ul style="columns: 2; list-style: disc; margin-left: 20px; color:#555; font-size:14px;">
+                    <li>False Flooring Raised Access Floor (RAF) Systems</li>
+		    <li>Interior False Ceiling</li>
+ 		    <li>Glass Partition</li>
+                    <li>Underfloor Air Distribution (UFAD) Systems</li>
+                    <li>Power & Ergonomics Solutions</li>   
+                  
+                </ul>
+            </div>
+            <!-- About Us -->
+            <div class="section">
+                <h2 class="section-title">About Us</h2>
+                <p style="font-size: 16px; line-height: 1.8; color: #555;">
+                    Metacraft Interior Trading Company, based in the UAE, specializes in supplying high-quality interior and architectural finishing materials that meet international standards. With strong partnerships across the GCC and India, we offer products such as metal ceiling systems, raised access floors, partition grids, and decorative finishes.  
+
+Driven by quality, innovation, and customer satisfaction, Metacraft combines design expertise with reliable sourcing to deliver sustainable and modern interior solutions. We welcome collaborations built on trust, growth, and shared success.
+                </p>
+            </div>
+
+            <!-- 1. Raised Access Floor Products -->
+            <div class="section">
+                <h2 class="section-title">Raised Access Floor (RAF) Systems</h2>
+                <p style="margin-bottom: 30px; color: #666;">Engineered floors that create a service void for power, data and air distribution in high‑performance environments.</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ca8f0bbb-0ee8-526a-8b5c-e38babb4a39a/5d1546f3-68ee-569f-a575-cf8eeb1c9131.jpg" alt="Steel Bare Panels" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Floor Systems</div>
+                            <div class="product-name">Steel Bare Panels</div>
+                            <p class="product-summary">
+                                Heavy‑duty steel panels with a cementitious core provide a robust, stable surface ideal for data centers and control rooms.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Fire-rated construction with high load capacity</li>
+                                <li>Standard 600 × 600 mm module size</li>
+                                <li>Optional antistatic HPL or tile finishes</li>
+                                <li>Compatible with full understructure systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                
+
+                    <div class="product-card">
+                        <img src=" https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ca8f0bbb-0ee8-526a-8b5c-e38babb4a39a/5d1546f3-68ee-569f-a575-cf8eeb1c9131.jpg" alt="HPL Panels" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Floor Systems</div>
+                            <div class="product-name">HPL Finish Panels</div>
+                            <p class="product-summary">
+                                Solid concrete core panels are designed for the highest static and rolling loads in demanding industrial and technical areas.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Very high load and impact resistance</li>
+                                <li>Long service life with minimal maintenance</li>
+                                <li>Ideal for control rooms and equipment halls</li>
+                                <li>Works with heavy‑duty pedestal systems</li>
+                            </ul>
+                        </div>
+                    </div>
+               
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766578293/search_images/b0e342dedd6735205bf2cab4c38f058efb13c17e.jpg" alt="Vinyl (Vetifile) Finish" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Floor Systems</div>
+                            <div class="product-name">Vinyl (Vetifile) Finish Panels</div>
+                            <p class="product-summary">
+                                Solid concrete core panels are designed for the highest static and rolling loads in demanding industrial and technical areas.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Very high load and impact resistance</li>
+                                <li>Long service life with minimal maintenance</li>
+                                <li>Ideal for control rooms and equipment halls</li>
+                                <li>Works with heavy‑duty pedestal systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 2. Interior False Ceiling -->
+            <div class="section">
+                <h2 class="section-title">Interior False Ceiling</h2>
+                <p style="margin-bottom: 30px; color: #666;">Architectural false ceiling and louver systems that enhance acoustics, aesthetics and service 		  		   access.</p>
+                <div class="product-grid">
+                    <!-- Metal Ceiling -->
+                    <div class="product-card">
+                        <img src="Metal Ceiling 3.jpg" alt="Metal Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">Metal Ceiling</div>
+                            <p class="product-summary">
+                                Durable metal tiles and planks create crisp, modern ceilings with excellent longevity and easy maintenance.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Quick tile swaps for plenum access, no tools/full disassembly.</li>
+                                <li>Perforated acoustic options with backing.</li>
+                                <li>Strong for high-traffic, industrial, humid areas; low upkeep.</li>
+                                <li>Ideal for lobbies, corridors, offices.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+		    <!-- Metal Lay Ceiling -->
+                    <div class="product-card">
+                        <img src="Metal lay Ceiling.jpg" alt="Metal Lay Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">Metal Lay Ceiling</div>
+                            <p class="product-summary">
+                                Durable metal tiles and planks create crisp, modern ceilings with excellent longevity and easy maintenance.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Impact/moisture/fire/mildew resistant; wipe-clean upkeep.</li>
+                                <li>Perforated for noise absorption in offices/hospitals/kitchens.</li>
+                                <li>Individual tile removal for plenum access; minimal HVAC disruption.</li>
+                                <li>Fits lobbies, corridors, offices.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+    		    <!-- SS Lay Ceiling -->
+                    <div class="product-card">
+                        <img src="SS lay Ceiling.jpg" alt="SS Lay Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">SS Lay Ceiling</div>
+                            <p class="product-summary">
+                                Durable metal tiles and planks create crisp, modern ceilings with excellent longevity and easy maintenance.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Superior corrosion/moisture resistance for humid/chemical areas.</li>
+                                <li>Hygienic surface blocks bacteria; suits healthcare/food sectors.</li>
+                                <li>Quick panel removal for cleaning and overhead access.</li>
+                                <li>Perforated options with acoustic backing for sound control.</li>
+                            </ul>
+                        </div>
+                    </div>	
+                    <!-- Trap Door Ceiling -->
+                    <div class="product-card">
+                        <img src="Trap Door Ceiling.jpg" alt="Trap Door Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling Door</div>
+                            <div class="product-name">Trap Door Ceiling</div>
+                            <p class="product-summary">
+                                Durable metal tiles and planks create crisp, modern ceilings with excellent longevity and easy maintenance.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Allen key locks, chains, steel wires, sliding hinges prevent accidental opening.</li>
+                                <li>Customizable sizes, retrofittable for existing ceilings; suits aluminum/fire-rated panels.</li>
+                                <li>Sleek design maintains aesthetics in residential/commercial/industrial spaces.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                   <!-- 84-C Ceiling -->
+                    <div class="product-card">
+                        <img src="84-C Ceiling.jpg" alt="Trap Door Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">84-C Ceiling</div>
+                            <p class="product-summary">
+                                Durable metal tiles and planks create crisp, modern ceilings with excellent longevity and easy maintenance.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Quick snap-fit cuts labor 30% vs traditional.</li>
+                                <li>Level finish with seismic resistance for safety.</li>
+                                <li>Fits gypsum, acoustic, moisture boards.</li>
+                                <li>Easy tile swap without full ceiling disruption.</li>
+                            </ul>
+                        </div>
+                    </div>		
+                    <!-- Baffle Ceiling -->
+                    <div class="product-card">
+                        <img src="Baffle Ceiling.jpg" alt="Baffle Ceiling System" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">Baffle Ceiling</div>
+                            <p class="product-summary">
+                                Suspended vertical blades create dramatic linear ceilings that absorb sound while keeping services accessible.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Ideal for airports, atriums, receptions.</li>
+				<li>Reduces echoes in offices, malls, auditoriums.</li>
+				<li>Easy MEP access; customizable heights.</li>
+				<li>Adds depth, texture, modern rhythm.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Open Cell Ceiling -->
+                    <div class="product-card">
+                        <img src="Open Cell Ceiling.jpg" alt="Open Cell Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">Open Cell Ceiling</div>
+                            <p class="product-summary">
+                                Grid‑like open cell modules create a floating lattice effect and allow easy integration of services above the ceiling plane.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Various cell sizes and depths</li>
+                                <li>Fits on standard T‑grid suspension</li>
+                                <li>Enhances visual depth while masking services</li>
+                                <li>Ideal for retail and commercial interiors</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mineral Fiber Tile -->
+                    <div class="product-card">
+                        <img src="Mineral Fiber Ceiling.jpg" alt="Mineral Fiber Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling Tile</div>
+                            <div class="product-name">Mineral Fiber Ceiling Tile</div>
+                            <p class="product-summary">
+                                Acoustic mineral fiber tiles improve speech clarity and reduce noise levels in busy interior environments.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Installed in T‑grid suspended ceilings</li>
+                                <li>Good sound absorption and insulation</li>
+                                <li>Available in fissured and smooth patterns</li>
+                                <li>Designed for offices, classrooms and healthcare</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- T-Grid System -->
+                    <div class="product-card">
+                        <img src="T-Grid Systems.jpg" alt="T-Grid System" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Suspension System</div>
+                            <div class="product-name">T‑Grid Ceiling System</div>
+                            <p class="product-summary">
+                                Galvanised steel main and cross T profiles form the structural grid for lay‑in tiles and boards.
+                            </p>
+                            <ul class="feature-list">
+                                <li>T‑24 and T‑15 grid options</li>
+                                <li>Quick hook‑on installation with hangers</li>
+                                <li>Compatible with mineral fiber, metal and PVC tiles</li>
+                                <li>Corrosion‑resistant finish for long life</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PVC Gypsum Tiles -->
+                    <div class="product-card">
+                        <img src="PVC Ceiling 3.jpg" alt="PVC Gypsum Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ceiling System</div>
+                            <div class="product-name">PVC Gypsum Ceiling Tiles</div>
+                            <p class="product-summary">
+                                Laminated gypsum tiles with a decorative PVC face provide a bright, washable ceiling finish.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Moisture‑resistant and easy to clean</li>
+                                <li>Installed in standard T‑grid systems</li>
+                                <li>Ideal for kitchens, washrooms and retail</li>
+                                <li>Available in multiple patterns and colours</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Louvers -->
+                    <div class="product-card">
+                        <img src="Sun Louver Ceiling.jpg" alt="Sun Louver Ceiling" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Façade & Interior</div>
+                            <div class="product-name">Sun Louvers & Screens</div>
+                            <p class="product-summary">
+                                Aluminium louver systems manage daylight and heat gain while adding a distinct architectural character.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Fixed or adjustable profiles for sun control</li>
+                                <li>Horizontal or vertical mounting options</li>
+                                <li>Powder‑coated or anodized finishes</li>
+                                <li>Suitable for facades, podiums and feature walls</li>          
+
+			   </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+	   <!-- 3. Glass Partition System -->
+            <div class="section">
+                <h2 class="section-title">Glass Partition</h2>
+                <p style="margin-bottom: 30px; color: #666;">Glass partition systems come in various types like framed, frameless, and sliding, each 			offering distinct balances of privacy, light transmission, and functionality for offices, homes, and commercial spaces. Common 					materials include tempered, laminated, or acoustic glass with customizable finishes.</p>
+                <div class="product-grid">
+                    <!-- Frame Glass Partition -->
+                    <div class="product-card">
+                        <img src="Frame Glass Partitioning.jpg" alt="Glass Partition" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Frame System</div>
+                            <div class="product-name">Frame Partition</div>
+                            <p class="product-summary">
+                                Framed glass partitions use slim aluminum or steel frames around tempered glass panels to provide structural support and a 				polished, professional look in offices and commercial spaces. They balance durability with aesthetics, offering more 				stability than frameless options while allowing light transmission.</p>
+                            <ul class="feature-list">
+                                <li>Slim aluminum frames (20-50mm) for 12mm glass durability.</li>
+                                <li>Modular panels with doors, seals for reconfiguration.</li>
+                                <li>Frosting/tinting for privacy, demountable design.</li>
+				<li>More stable than frameless for UAE/India offices.</li>
+  			    </ul>
+                        </div>
+                    </div>
+
+ 		<div class="product-card">
+                        <img src="Semi Frame Glass Partitioning.jpg" alt="Semi Glass Frame Partition" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Frame System</div>
+                            <div class="product-name">Semi Frame Partition</div>
+                            <p class="product-summary">
+                                Semi-framed glass partitions combine minimal framing—typically at the top and bottom channels—with large glass panels on the 				sides for a balanced, modern look that offers more support than fully frameless systems. They provide structural stability 				while maintaining high transparency and light flow in offices and commercial interiors.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Slim profiles (15-50mm) hold 8-12mm toughened glass; edge-to-edge sides.</li>
+                                <li>Modular GP2510 (41.5x25mm) or GP18100 (18x100mm) channels for single/double/VIG glazing.</li>
+                                <li>Sliding/swing doors, seals, powder-coat; 3m heights with brackets/clips.</li>
+             
+                  	     </ul>
+                        </div>
+                    </div>
+
+		<div class="product-card">
+                        <img src="Frameless Glass Partitioning.jpg" alt="Frameless Glass Frame Partition" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Frameless System</div>
+                            <div class="product-name">Frameless Partition</div>
+                            <p class="product-summary">
+                                Frameless glass partitions employ single large sheets of toughened or laminated glass secured by minimal top/bottom tracks 				or patch fittings, eliminating visible frames for a seamless, ultra-modern appearance. They maximize transparency and light 				flow in offices, homes, and retail spaces while providing privacy options via frosting or tinting.</p>
+                            <ul class="feature-list">
+                                <li>8-16mm glass (tempered/low-iron/LCD) up to 60" wide x 12ft high; curved options.</li>
+                                <li>1"x1"/1"x4" tracks in anodized/RAL; pivot/sliding doors, STC 47.</li>
+                                <li>Patch fittings, guides, blinds for easy relocation.</li>
+
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+	    <!-- 4. Underfloor Air Distribution -->
+            <div class="section">
+                <h2 class="section-title">Underfloor Air Distribution (UFAD)</h2>
+                <p style="margin-bottom: 30px; color: #666;">Efficient HVAC solutions delivering conditioned air through the raised floor plenum.</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1763892562/search_images/a8393b754fe9b61e741495af78aee2e0efb0ad1a.jpg" alt="UFAD Plenum System" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">UFAD Plenum System</div>
+                            <p class="product-summary">
+                                Creates a sealed underfloor air plenum that distributes conditioned air evenly across open office or data hall layouts.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Improved thermal comfort and energy efficiency</li>
+                                <li>Supports flexible space reconfiguration</li>
+                                <li>Integrates with standard HVAC equipment</li>
+                                <li>Reduced ductwork in ceiling space</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766578294/search_images/0862622faf0f83c6ab4134fa6d59be6381c9dd02.jpg" alt="UFAD Diffusers & Grilles" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">UFAD Diffusers & Grilles</div>
+                            <p class="product-summary">
+                                Floor diffusers and grilles regulate air delivery at occupant level for superior comfort and individual control.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Adjustable airflow direction and volume</li>
+                                <li>Low noise operation for quiet offices</li>
+                                <li>Available in circular and rectangular forms</li>
+                                <li>Easy removal for cleaning and maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1764134666/search_images/4a0f2cf2c0fcc44b6858de1d28cedd8769570534.jpg" alt="Smart Temperature Control" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Climate Control</div>
+                            <div class="product-name">Smart Temperature Control</div>
+                            <p class="product-summary">
+                                Zone thermostats and sensors monitor floor plenum conditions and maintain stable temperatures throughout the space.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Supports zoning and occupancy‑based control</li>
+                                <li>Compatible with modern BMS platforms</li>
+                                <li>Real‑time monitoring of supply conditions</li>
+                                <li>Helps reduce overall energy consumption</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Power & Ergonomics -->
+            <div class="section">
+                <h2 class="section-title">Power & Ergonomics Solutions</h2>
+                <p style="margin-bottom: 30px; color: #666;">Integrated electrical and workstation products for safe, comfortable and productive offices.</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766578293/search_images/a8fded8f30f6ce0f3d87eaa430a187d276d38032.jpg" alt="Power Distribution Units" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Power Management</div>
+                            <div class="product-name">Power Distribution Units (PDUs)</div>
+                            <p class="product-summary">
+                                Rack and floor‑mounted PDUs distribute reliable power to IT equipment, workstations and support systems.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Multiple amperage and outlet configurations</li>
+                                <li>Built‑in surge and overload protection</li>
+                                <li>Optional metering and monitoring features</li>
+                                <li>Modular design for easy expansion</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766578293/search_images/19df33a074ddf3ceecc68faaea08d1f89f439041.jpg" alt="Sit-Stand Workstations" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ergonomics</div>
+                            <div class="product-name">Ergonomic Sit‑Stand Workstations</div>
+                            <p class="product-summary">
+                                Height‑adjustable desks encourage healthy posture and movement, supporting modern agile workstyles.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Electric height adjustment with memory presets</li>
+                                <li>Stable frame with low noise motors</li>
+                                <li>Anti‑collision safety technology</li>
+                                <li>Options for single or bench configurations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1763778280/search_images/9c5006fb4a7fdf21f4cc6261a2e48874bebc0102.jpg" alt="Ergonomic Accessories" class="product-image">
+                        <div class="product-info">
+                            <div class="product-category">Ergonomics</div>
+                            <div class="product-name">Ergonomic Accessories</div>
+                            <p class="product-summary">
+                                Monitor arms, keyboard trays and footrests fine‑tune each workstation for comfort and productivity.
+                            </p>
+                            <ul class="feature-list">
+                                <li>VESA‑compatible monitor arms with full adjustability</li>
+                                <li>Under‑desk keyboard trays to free up space</li>
+                                <li>Document holders to reduce neck strain</li>
+                                <li>Anti‑fatigue mats for standing desks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+<div class="benefits">
+    <h2 class="benefits-title">Why Choose MetaCraft Interior Trading</h2>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <img src="QA_Icon.png" class="benefit-icon">
+            <div class="benefit-title">Quality Assurance</div>
+            <div class="benefit-text">Processes aligned to international standards and backed by rigorous testing at every stage.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Comprehensive Range Icon.jfif" alt="Comprehensive Range" class="benefit-icon">
+            <div class="benefit-title">Comprehensive Range</div>
+            <div class="benefit-text">Single‑window source for flooring, ceilings, airflow, power and ergonomic solutions.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Expert Support Icon.jfif" alt="Expert Support" class="benefit-icon">
+            <div class="benefit-title">Expert Support</div>
+            <div class="benefit-text">Dedicated team for design assistance, site coordination and post‑installation service.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Cost Effective Icon.png" alt="Cost-Effective" class="benefit-icon">
+            <div class="benefit-title">Cost-Effective</div>
+            <div class="benefit-text">Optimized product selection for lifecycle value, with options for bulk and project pricing.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Sustainability Icon.png" alt="Sustainability" class="benefit-icon">
+            <div class="benefit-title">Sustainability</div>
+            <div class="benefit-text">Focus on energy‑efficient solutions and recyclable materials wherever possible.</div>
+        </div>
+        <div class="benefit-item">
+            <img src="Future Ready ICON.png" alt="Future Ready" class="benefit-icon">
+            <div class="benefit-title">Future Ready</div>
+            <div class="benefit-text">Modular systems that support future technology upgrades and layout changes.</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.benefit-icon {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .benefit-icon {
+        width: 50px !important;
+        height: 50px !important;
+        padding: 10px;
+    }
+}
+</style>
+
+
+            <!-- Applications -->
+            <div class="section">
+                <h2 class="section-title">Applications</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Data Centers</h3>
+                        <p style="color: #666; font-size: 14px;">Raised floors, airflow containment, structured cabling and reliable power for mission‑critical IT environments.</p>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Corporate Offices</h3>
+                        <p style="color: #666; font-size: 14px;">Flexible workstations, acoustic ceilings and integrated services for modern, collaborative workplaces.</p>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Healthcare</h3>
+                        <p style="color: #666; font-size: 14px;">Cleanable ceilings, resilient floors and controlled services for hospitals and diagnostic centers.</p>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Financial Institutions</h3>
+                        <p style="color: #666; font-size: 14px;">Secure infrastructure for trading floors, server rooms and head offices with high uptime requirements.</p>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Educational</h3>
+                        <p style="color: #666; font-size: 14px;">Classrooms, labs and lecture halls with good acoustics and flexible technology integration.</p>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #00bcd4;">
+                        <h3 style="color: #1a3a52; margin-bottom: 10px;">Industrial & Warehousing</h3>
+                        <p style="color: #666; font-size: 14px;">Heavy‑duty floors, louvers and robust services for plants, logistics hubs and control buildings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p style="margin-bottom: 40px; font-size: 16px;">Contact MetaCraft Interior Trading for detailed product specifications, BOQs and project‑specific proposals.</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-item-title">📧 Email</div>
+                        <div class="contact-item-value">metacraft.interior.trading@gmail.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-title">📱 Mobile</div>
+                        <div class="contact-item-value">+971 56 242 4001</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-title">🌐 Website</div>
+                        <div class="contact-item-value">www.metacraft.in</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-title">📍 Ajman Freezone</div>
+                        <div class="contact-item-value">Ajman, UAE</div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div class="hours-title">Business Hours</div>
+                    <div class="hours-list">
+                        Monday - Friday: 9:00 AM - 6:00 PM IST<br>
+                        Saturday: 10:00 AM - 4:00 PM IST<br>
+                        Sunday: Closed
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-text"><strong>MetaCraft Interior Trading</strong> - Premium Workplace Products Catalogue 2025</div>
+            <div class="footer-text">All products come with manufacturer warranty • Customization & bulk discounts available</div>
+            <div class="footer-text" style="font-size: 12px; margin-top: 15px; color: #888;">
+                Document Version: 1.0 | Date: December 2025 | Valid Until: December 2026<br>
+                For the most up-to-date product information, please contact us directly.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function printToPDF() { window.print(); }
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Catalogue loaded. Use Ctrl+P or Cmd+P to save as PDF');
+        });
+    </script>
+</body>
+</html>

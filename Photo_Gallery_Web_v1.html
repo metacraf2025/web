@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCraft Interior Trading - Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        header {
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            padding: 1rem 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        header h1 { color: #667eea; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        nav { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        nav button {
+            background: #667eea; color: white; border: none; padding: 0.8rem 1.5rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600; transition: all 0.3s;
+        }
+        nav button:hover, nav button.active { background: #764ba2; transform: scale(1.05); }
+        .gallery {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem; padding: 3rem 2rem; max-width: 1400px; margin: 0 auto;
+        }
+        .gallery-item {
+            position: relative; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: transform 0.4s;
+            height: 300px; cursor: pointer;
+        }
+        .gallery-item:hover { transform: scale(1.05); }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white; padding: 2rem 1.5rem 1.5rem; transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover .overlay { transform: translateY(0); }
+        .specs-panel {
+            position: fixed; top: 0; right: -100%; width: 40%; height: 100vh;
+            background: white; box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+            transition: right 0.4s; z-index: 1000; overflow-y: auto;
+            padding: 2rem;
+        }
+        .specs-panel.open { right: 0; }
+        .close-btn {
+            position: absolute; top: 1rem; right: 1rem; font-size: 2rem;
+            background: none; border: none; cursor: pointer; color: #666;
+        }
+        .product-specs {
+            margin-top: 2rem;
+        }
+        .product-specs img { max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 1rem; }
+        .product-specs h2 { color: #667eea; font-size: 2.2rem; margin-bottom: 1rem; }
+        .product-specs p { font-size: 1.1rem; margin-bottom: 1.5rem; color: #555; }
+        /* Enlarged Table Styles */
+        .product-specs table {
+            width: 100%; min-width: 500px; font-size: 1.2rem;
+            border-collapse: collapse; margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .product-specs th, .product-specs td {
+            padding: 1.5rem 1rem; text-align: left; border: 2px solid #ddd;
+        }
+        .product-specs th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; font-weight: 700; font-size: 1.3rem;
+        }
+        .product-specs tr:nth-child(even) { background: #f8f9ff; }
+        @media (max-width: 768px) {
+            .specs-panel { width: 100%; right: -100%; }
+            .specs-panel.open { right: 0; }
+            .product-specs table { font-size: 1rem; min-width: 100%; }
+            .product-specs th, .product-specs td { padding: 1rem 0.5rem; }
+            .gallery { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MetaCraft Interior Trading</h1>
+        <nav>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="raf">RAF</button>
+            <button class="filter-btn" data-filter="ceiling">Ceiling</button>
+            <button class="filter-btn" data-filter="ufad">UFAD</button>
+            <button class="filter-btn" data-filter="partition">Partition</button>
+            <button class="filter-btn" data-filter="power">Power/Ergo</button>
+        </nav>
+    </header>
+    <div class="gallery" id="gallery">
+        <!-- RAF Product -->
+        <div class="gallery-item" data-category="raf" data-product="raf1">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Raised Access Floor">
+            <div class="overlay">
+                <h3>Raised Access Floor</h3>
+                <p>Anti-Static for server rooms</p>
+            </div>
+        </div>
+        <!-- Add more gallery items for other products here -->
+    </div>
+
+    <!-- Right-side Specs Panel -->
+    <div class="specs-panel" id="specsPanel">
+        <button class="close-btn" id="closePanel">&times;</button>
+        <div id="specsContent"></div>
+    </div>
+
+    <script>
+        // Product Specs Data [conversation_history:11] - Enhanced Table
+        const productSpecs = {
+            raf1: {
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                title: 'Raised Access Floor (RAF) - Installation',
+                desc: 'Anti-Static Laminated False Flooring for server rooms. Ideal for data centers with high load capacity.',
+                table: `
+                    <table>
+                        <tr><th>Specification</th><th>Details</th></tr>
+                        <tr><td>Panel Size</td><td>600x600mm (standard metric)</td></tr>
+                        <tr><td>Thickness</td><td>30-40mm (cementitious core)</td></tr>
+                        <tr><td>Load Rating</td><td>Up to 3000kg concentrated (800-1250 lbf)</td></tr>
+                        <tr><td>Height Adjustable</td><td>200-1000mm pedestal system</td></tr>
+                        <tr><td>Finish</td><td>Anti-static HPL laminate (1.0-1.5mm)</td></tr>
+                        <tr><td>Weight per Panel</td><td>12-18kg (steel/woodcore)</td></tr>
+                        <tr><td>Fire Rating</td><td>Class 0 / A-grade retardant</td></tr>
+                        <tr><td>Application</td><td>Server rooms, data centers, offices</td></tr>
+                    </table>
+                `
+            }
+            // Expand with more: ceiling1, ufad1, etc.
+        };
+
+        // Filter Functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Open Specs Panel
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const productId = item.dataset.product;
+                const spec = productSpecs[productId];
+                if (spec) {
+                    document.getElementById('specsContent').innerHTML = `
+                        <img src="${spec.img}" alt="${spec.title}">
+                        <h2>${spec.title}</h2>
+                        <p>${spec.desc}</p>
+                        <div class="product-specs">${spec.table}</div>
+                    `;
+                    document.getElementById('specsPanel').classList.add('open');
+                }
+            });
+        });
+
+        // Close Panel
+        document.getElementById('closePanel').addEventListener('click', () => {
+            document.getElementById('specsPanel').classList.remove('open');
+        });
+        document.getElementById('specsPanel').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('specsPanel')) {
+                document.getElementById('specsPanel').classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
