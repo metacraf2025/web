@@ -96,7 +96,109 @@
     </style>
 </head>
 <body>
+<!-- Fixed MetaCraft Chatbot with Formspree Delivery -->
+<div class="chatbot-toggler" onclick="toggleChatbot()">
+    <span>💬</span>
+</div>
+<div class="chatbot" id="chatbot">
+    <header>
+        <h3>MetaCraft Assistant</h3>
+        <span class="close-btn" onclick="toggleChatbot()">✕</span>
+    </header>
+    <ul class="chatbox" id="chatbox">
+        <li class="chat incoming">
+            <p>Hello! Ask about RAF panels, interiors, or UAE setup. Messages email us!</p>
+        </li>
+    </ul>
+    <form id="chatForm" action="https://formspree.io/f/mjgkonjo" method="POST" class="chat-input">
+        <input type="hidden" name="chat_transcript" id="transcript">
+        <input type="email" name="email" placeholder="your@email.com (optional)" style="flex:0 1 120px;">
+        <input type="text" id="chatInput" name="message" placeholder="Type message..." required onkeypress="handleKeyPress(event)">
+        <button type="submit" onclick="sendMessage(); return false;">Send</button>
+    </form>
+</div>
 
+<style>
+.chatbot-toggler { position: fixed; bottom: 30px; left: 35px; height: 50px; width: 50px; background: #25D366; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease; z-index: 1000; }
+.chatbot-toggler:hover { transform: scale(1.1); }
+.chatbot-toggler span { color: white; font-size: 24px; }
+.chatbot { position: fixed; left: 35px; bottom: 90px; width: 350px; height: 500px; background: white; border-radius: 15px; opacity: 0; transform: scale(0.5); transform-origin: bottom left; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.3s ease; z-index: 999; overflow: hidden; }
+body.show-chatbot .chatbot { opacity: 1; transform: scale(1); }
+.chatbot header { background: #25D366; color: white; padding: 15px; text-align: center; position: relative; }
+.chatbot header h3 { margin: 0; font-size: 1.2rem; }
+.close-btn { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 1.5rem; }
+.chatbox { height: 350px; overflow-y: auto; padding: 20px; list-style: none; }
+.chat { margin: 15px 0; display: flex; }
+.incoming { flex-direction: row; }
+.outgoing { flex-direction: row-reverse; }
+.chat p { padding: 12px 16px; border-radius: 18px; max-width: 70%; word-wrap: break-word; }
+.incoming p { background: #f2f2f2; color: #333; border-bottom-left-radius: 5px; }
+.outgoing p { background: #25D366; color: white; border-bottom-right-radius: 5px; }
+.chat-input { display: flex; padding: 15px; gap: 5px; border-top: 1px solid #eee; flex-wrap: wrap; }
+.chat-input input { padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none; font-size: 14px; }
+.chat-input button { padding: 10px 18px; background: #25D366; color: white; border: none; border-radius: 20px; cursor: pointer; font-size: 14px; white-space: nowrap; }
+.chat-input button:hover { background: #128C7E; }
+@media (max-width: 768px) { .chatbot-toggler { left: 20px; bottom: 20px; } .chatbot { left: 20px; bottom: 80px; width: 90vw; height: 70vh; } .chat-input { flex-direction: column; gap: 10px; } .chat-input input, .chat-input button { flex: 1; } }
+</style>
+
+<script>
+const chatbot = document.getElementById('chatbot');
+const chatbox = document.getElementById('chatbox');
+const chatInput = document.getElementById('chatInput');
+const chatForm = document.getElementById('chatForm');
+const transcript = document.getElementById('transcript');
+
+function toggleChatbot() {
+    document.body.classList.toggle('show-chatbot');
+    if (document.body.classList.contains('show-chatbot')) chatInput.focus();
+}
+
+function addMessage(message, isOutgoing) {
+    const li = document.createElement('li');
+    li.className = `chat ${isOutgoing ? 'outgoing' : 'incoming'}`;
+    li.innerHTML = `<p>${message}</p>`;
+    chatbox.appendChild(li);
+    chatbox.scrollTop = chatbox.scrollHeight;
+    transcript.value = chatbox.innerText;  // Auto-capture transcript
+}
+
+function sendMessage() {
+    const message = chatInput.value.trim();
+    if (!message) return;
+    
+    addMessage(message, true);
+    chatInput.value = '';
+    
+    // Bot response
+    setTimeout(() => {
+        let response = "Thanks! ";
+        const msgLower = message.toLowerCase();
+        if (msgLower.includes('raf') || msgLower.includes('floor')) response += "RAF panels fire-rated for UAE.";
+        else if (msgLower.includes('ceiling')) response += "False ceilings wholesale.";
+        else if (msgLower.includes('uae')) response += "Business setup ready.";
+        else response += "See photo gallery.";
+        addMessage(response + " More?", false);
+    }, 800);
+    
+    // Submit to Formspree after bot responds
+    setTimeout(() => {
+        chatForm.submit();
+    }, 1000);
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') sendMessage();
+}
+
+// Form submit fallback
+chatForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    sendMessage();
+});
+</script>
+
+
+<!-- MetaCraft Whatsapp Integration -->
 
 <a href="https://wa.me/971562424001?text=Hello" class="whatsapp-float" target="_blank" rel="noopener" title="Message MetaCraft on WhatsApp - Interiors UAE">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -110,7 +212,7 @@
     width: 50px;
     height: 50px;
     bottom: 30px;
-    right: 10px;
+    right: 30px;
     background: #25D366;
     border-radius: 50%;
     display: flex;
@@ -140,6 +242,7 @@
     .whatsapp-float { width: 42px; height: 42px; }
 }
 </style>
+
 
 
     <nav class="nav-bar">
