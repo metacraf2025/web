@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCraft Interior Trading - Premium Interior Solutions UAE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1d4ed8 100%);
+            --secondary-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --accent: #10b981;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --bg-primary: #f8fafc;
+            --white: #ffffff;
+            --shadow-light: 0 10px 40px rgba(15, 23, 42, 0.08);
+            --shadow-heavy: 0 25px 60px rgba(15, 23, 42, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Header with Logo */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(25px);
+            z-index: 10000;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 800;
+            font-size: 28px;
+            z-index: 10001;
+            position: relative;
+        }
+
+        .logo-img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(30, 58, 138, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.4);
+        }
+
+        .logo-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #1d4ed8;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* Hero Section with Logo Emphasis */
+        .hero {
+            min-height: 100vh;
+            background: var(--secondary-gradient);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 28px;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 4vw, 28px);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow-heavy);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 70px rgba(30, 58, 138, 0.45);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .hero-logo-showcase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .main-logo {
+            width: 280px;
+            height: 280px;
+            object-fit: contain;
+            border-radius: 24px;
+            box-shadow: 0 40px 100px rgba(255, 255, 255, 0.15);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .logo-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--white);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 48px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .stat-item p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 140px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 48px 40px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-light);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-heavy);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-hero {
+            background: var(--primary-gradient);
+            padding: 120px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 32px;
+            position: relative;
+        }
+
+        .cta-hero h2 {
+            font-size: clamp(40px, 7vw, 72px);
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-gradient);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            max-width: 1440px;
+            margin: 0 auto 60px;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .footer-logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .footer h3 {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(75, 85, 99, 0.3);
+            padding-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 60px;
+            }
+
+            .nav-menu {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="MetaCraft.jpeg" alt="MetaCraft Logo" class="logo-img">
+                <span class="logo-text">MetaCraft</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div>
+                <h1>Premium Interior Solutions<br><span>for Modern Commercial Spaces</span></h1>
+                <p class="hero-subtitle">Fire-rated raised access flooring, architectural ceilings, glass partitions and UFAD systems. UAE Free Zone based with GCC-wide delivery and installation.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore Solutions
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Get Quote Now
+                    </a>
+                </div>
+            </div>
+            <div class="hero-logo-showcase">
+                <img src="MetaCraft.jpeg" alt="MetaCraft Premium Interiors" class="main-logo">
+                <div class="logo-badge">
+                    <i class="fas fa-crown"></i>
+                    Ajman Free Zone • UAE
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>500K+</h3>
+                <p>Sqft Installed</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>2HR</h3>
+                <p>Fire Rating</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Support Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Our Core Solutions</h2>
+            <p style="text-align: center; font-size: 20px; color: var(--text-secondary); max-width: 700px; margin: 0 auto 100px;">Complete workspace transformation from underfloor infrastructure to architectural finishes</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Raised Access Flooring</h3>
+                    <p>Steel & concrete core RAF panels (600x600mm) with 2hr fire rating. HPL, vinyl & bare finishes for data centers, control rooms & offices.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>UFAD Systems</h3>
+                    <p>Underfloor air distribution plenums, diffusers & smart controls. 30% energy savings with superior thermal comfort in open-plan spaces.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>False Ceilings</h3>
+                    <p>Metal lay-in, exposed grid & acoustic perforated ceilings. Moisture/fire resistant for offices, hospitals & humid environments.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-divide"></i>
+                    </div>
+                    <h3>Glass Partitions</h3>
+                    <p>Framed, semi-frameless & frameless systems up to 3m height. Frosted/tinted privacy glass with swing/sliding door options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-hero" id="contact">
+        <div class="cta-content">
+            <h2>Transform Your Workspace Today</h2>
+            <p style="font-size: 22px; opacity: 0.95;">Ready for premium RAF panels, ceilings & partitions? UAE Free Zone specialists serving GCC markets.</p>
+            <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 48px;">
+                <a href="mailto:metacraft.interior.trading@gmail.com?subject=RAF%20Quote%20Request" class="btn-primary">
+                    <i class="fas fa-envelope"></i> Send Email
+                </a>
+                <a href="tel:+971562424001" class="btn-secondary">
+                    <i class="fas fa-phone"></i> +971 56 242 4001
+                </a>
+            </div>
+            <div style="margin-top: 32px; font-size: 16px; opacity: 0.9;">
+                📍 Ajman Free Zone, UAE | 🌐 Serving GCC & India
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="MetaCraft.jpeg" alt="MetaCraft" style="width: 48px; height: 48px; object-fit: contain;">
+                    <span style="font-size: 24px; font-weight: 800; color: white;">MetaCraft</span>
+                </div>
+                <p style="max-width: 280px; margin-bottom: 24px;">Premium interior trading FZ-LLC. Raised flooring, ceilings & workspace solutions for UAE commercial projects.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <div><a href="#home" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 12px;">Home</a></div>
+                <div><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 12px;">Services</a></div>
+                <div><a href="https://www.metacraft.in" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block;">Website</a></div>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <div style="margin-bottom: 12px;"><i class="fas fa-envelope" style="color: var(--accent); margin-right: 8px;"></i>metacraft.interior.trading@gmail.com</div>
+                <div style="margin-bottom: 12px;"><i class="fas fa-phone" style="color: var(--accent); margin-right: 8px;"></i>+971 56 242 4001</div>
+                <div><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 8px;"></i>Ajman Free Zone, UAE</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MetaCraft Interior Trading FZ-LLC. All rights reserved. Premium RAF panels, ceilings & interiors for UAE commercial spaces.[file:1][file:2][attached_file:1]
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling & active nav
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Header scroll effects
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)';
+                header.style.height = '70px';
+                document.querySelector('.nav-container').style.height = '70px';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.97)';
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.04)';
+                header.style.height = '90px';
+                document.querySelector('.nav-container').style.height = '90px';
+            }
+
+            // Active nav link
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Floating animation for main logo
+        const mainLogo = document.querySelector('.main-logo');
+        if (mainLogo) {
+            mainLogo.addEventListener('mouseenter', () => {
+                mainLogo.style.animationPlayState = 'paused';
+                mainLogo.style.transform = 'scale(1.05)';
+            });
+            mainLogo.addEventListener('mouseleave', () => {
+                mainLogo.style.animationPlayState = 'running';
+                mainLogo.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>
