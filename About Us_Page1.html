@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MetaCraft Interior Trading - UAE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.4; /* Tighter lines */
+            color: #333; 
+            background: #f5f5f5; 
+            font-size: 0.95rem; /* Smaller base font */
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: #ffffff; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+            margin-top: 80px;
+        }
+        /* Navigation Bar - Unchanged */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .nav-menu {
+            max-width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            list-style: none;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        .nav-item { flex: 1; min-width: 120px; text-align: center; }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: block;
+            padding: 15px 12px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-item:last-child .nav-link { border-right: none; }
+        .nav-link:hover { background-color: rgba(0,188,212,0.2); color: #00bcd4; }
+        .nav-link:active { background-color: rgba(0,188,212,0.4); }
+        /* Hero - 50% height reduction */
+        .hero {
+            text-align: center;
+            padding: 1.5rem 2rem; /* Halved from 3rem */
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 50%, #00bcd4 100%);
+            color: white;
+        }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; font-weight: 700; } /* Smaller */
+        .hero p { font-size: 1rem; opacity: 0.95; margin-bottom: 0; }
+        /* Sections - 60% height reduction */
+        .section {
+            padding: 1rem 2rem; /* Halved from 2.5rem */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section h2 { 
+            font-size: 2rem; /* Reduced from 2.5rem */
+            color: #00bcd4; 
+            margin-bottom: 0.75rem; /* Halved */
+            text-align: center; 
+            font-weight: 600; 
+        }
+        .section p { 
+            font-size: 1rem; /* Slightly smaller */
+            text-align: justify; 
+            margin-bottom: 0.75rem; /* Reduced */
+        }
+        .why-list {
+            font-size: 1rem;
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .why-list li {
+            background: #f8fafc;
+            margin: 0.25rem 0; /* 66% reduction */
+            padding: 0.875rem; /* Reduced from 1.25rem */
+            border-left: 4px solid #00bcd4;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+        .why-list li:hover { box-shadow: 0 4px 12px rgba(0,188,212,0.2); transform: translateX(8px); }
+        /* Responsive - Even tighter */
+        @media (max-width: 768px) {
+            .nav-menu { flex-direction: column; }
+            .nav-item { min-width: 100%; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero { padding: 1rem 1rem; }
+            .section { padding: 0.75rem 1rem; }
+            .section h2 { font-size: 1.75rem; }
+        }
+        @media print {
+            .nav-bar { display: none; }
+            body { background: white; }
+            .container { box-shadow: none; margin-top: 0; }
+            .section { padding: 0.5rem; }
+            .why-list li { margin: 0.125rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="Photo_Gallery_Web.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="Photo_Gallery_Web.html#photo-gallery" class="nav-link">Photo Gallery</a></li>
+            <li class="nav-item"><a href="#video-gallery" class="nav-link">Video Gallery</a></li>
+            <li class="nav-item"><a href="Enquiry_Page.html" class="nav-link">Enquiry</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="About_Us_Page1.html" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>About MetaCraft</h1>
+            <p>Leading provider of innovative interior solutions in UAE.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Story</h2>
+            <p>MetaCraft Interior Trading Company, based in the UAE, specializes in supplying high-quality interior and architectural finishing materials that meet international standards. With strong partnerships across the GCC and India, we offer products such as metal ceiling systems, raised access floors, partition grids, and decorative finishes for corporate offices, data centers, healthcare facilities, and industrial spaces.</p>
+            <p>Driven by quality, innovation, and customer satisfaction, MetaCraft combines design expertise with reliable sourcing to deliver sustainable and modern interior solutions. We welcome collaborations built on trust, growth, and shared success.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>To elevate spaces with durable, fire-rated panels (e.g., 600x600mm RAF, Class 0/A1), swirl diffusers, and customizable interiors. Committed to financial planning, compliance, and client success across UAE free zones.</p>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose Us</h2>
+            <ul class="why-list">
+                <li>Expertise in flooring systems and UAE licensing.</li>
+                <li>Responsive web catalogues for global reach.</li>
+                <li>Quality Assurance with international standards.</li>
+                <li>Comprehensive Range of RAF, ceilings, and partitions.</li>
+                <li>Expert Support for data centers and offices.</li>
+                <li>Cost-Effective sourcing from GCC/India.</li>
+                <li>Future Ready with modular, sustainable designs.</li>
+                <li>Proven sustainability and fire-rated solutions.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
